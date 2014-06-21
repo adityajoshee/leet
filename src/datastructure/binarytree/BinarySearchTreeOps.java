@@ -2,6 +2,7 @@ package datastructure.binarytree;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class BinarySearchTreeOps {
 	public static BinaryNode create(int rootValue){
@@ -79,6 +80,59 @@ public class BinarySearchTreeOps {
 	}
 	
 	public static void dfs(BinaryNode root){
-		
+		if(root!=null){
+			Stack<BinaryNode> s  = new Stack<BinaryNode>();
+			s.push(root);
+			while(!s.isEmpty()){
+				BinaryNode t = s.pop();
+				System.out.print(t.getData()+" ");
+				if(t.getRight()!=null){
+					s.push(t.getRight());
+				}
+				if(t.getLeft()!=null){
+					s.push(t.getLeft());
+				}
+			}
+		}
+	}
+	
+	public static void printBoundary(BinaryNode root){
+		System.out.println("\nBinary Tree Boundary :     ");
+		printPreorderLeftOnly(root);
+		printInorderLeafOnly(root);
+		printPostOrderRightOnly(root);
+	}
+	
+	private static void printPreorderLeftOnly(BinaryNode root){
+		if(root!=null){
+			if(!isLeaf(root))
+				System.out.print(root.getData()+" ");
+			printPreorderLeftOnly(root.getLeft());
+		}
+	}
+	
+	private static void printInorderLeafOnly(BinaryNode root){
+		if(root!=null){
+			printInorderLeafOnly(root.getLeft());
+			if(root.getLeft()==null && root.getRight()==null){
+				System.out.print(root.getData() +" ");
+			}
+			printInorderLeafOnly(root.getRight());
+		}
+	}
+	
+	private static void printPostOrderRightOnly(BinaryNode root){
+		if(root!=null){
+			printPostOrderRightOnly(root.getRight());
+			if(!isLeaf(root))
+				System.out.print(root.getData()+ " ");
+		}
+	}
+	
+	public static boolean isLeaf(BinaryNode node){
+		if(node.getLeft()==null && node.getRight()==null){
+			return true;
+		}
+		return false;
 	}
 }

@@ -11,13 +11,20 @@ public class BSTDemo {
 		BinarySearchTreeOps.add(root, 1);
 		BinarySearchTreeOps.add(root, 3);
 		BinarySearchTreeOps.add(root, 9);
+		
 		System.out.println("In Order: ");BinarySearchTreeOps.inOrder(root);
+		
 		System.out.println("\nPre Order: ");BinarySearchTreeOps.preOrder(root);
+		
 		System.out.println("\nBreadth First Traversal: ");
 		BinarySearchTreeOps.bfs(root);
-		System.out.println("\nNodes at distance 3 from root: ");
+		
+		System.out.println("\nDepth First Traversal: ");
+		BinarySearchTreeOps.dfs(root);
+		
+		System.out.println("\nNodes at distance 2 from root: ");
 		BinarySearchTreeOps.printNodeAtDistance(root, 2);
-
+		
+		BinarySearchTreeOps.printBoundary(root);
 	}
-
 }

@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.sort;
 
 // Classic Insertion Sort
 // O(n*n)
