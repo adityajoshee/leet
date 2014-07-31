@@ -1,10 +1,13 @@
 package datastructure.linkedlist;
 
+import sun.awt.image.ImageWatched;
+
 public class LinkedList {
 	public static ListNode getNew(int data){
 		ListNode n = new ListNode(data);
 		return n;
 	}
+
 	public static ListNode search(ListNode root,int data){
 		while(root!=null){
 			if(root.getData()==data)
@@ -13,6 +16,7 @@ public class LinkedList {
 		}
 		return null;
 	}
+
 	public static boolean appendNode(ListNode root,int data){
 		ListNode n = new ListNode(data);
 		if(root==null){
@@ -25,12 +29,14 @@ public class LinkedList {
 		root.setNext(n);
 		return true;
 	}
+
 	public static void printList(ListNode root){
 		while(root!=null){
 			System.out.print(root.getData()+" ");
 			root=root.getNext();
 		}
 	}
+
 	public static ListNode sumLists(ListNode L1,ListNode L2){
 		int size1=countNodes(L1);
 		int size2=countNodes(L2);
@@ -91,4 +97,40 @@ public class LinkedList {
 		}
 		return i;
 	}
+
+    public static boolean isPalindrome(ListNode head){
+        if(head!=null){
+            ListNode p= getMiddleNode(head);
+            if(LinkedList.countNodes(head)%2!=0){
+                p=p.getNext();
+            }
+            if(isPalindromeHelper(head,p)!=null){
+                return true;
+            }
+            return false;
+        }
+        return true;
+    }
+
+    private static ListNode isPalindromeHelper(ListNode head, ListNode p) {
+        if(p==null){
+            return head;
+        }
+        head=isPalindromeHelper(head,p.getNext());
+
+        if(head.getData()==p.getData()){
+            return (head.getNext()!=null)?head.getNext():null;
+        }
+
+        return head;
+    }
+
+    public static ListNode getMiddleNode(ListNode head){
+        int size= LinkedList.countNodes(head);
+        ListNode p=head;
+            for(int i=0;i<size/2;i++){
+                p=p.getNext();
+            }
+        return p;
+    }
 }

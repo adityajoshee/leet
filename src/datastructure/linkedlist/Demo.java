@@ -9,10 +9,18 @@ public class Demo {
 		Random rand = new Random();
 		int i=4;
 		while(i>0){
-			LinkedList.appendNode(L1, rand.nextInt(10));
+			LinkedList.appendNode(L1,i);
 			i--;
 		}
-		i=7;
+        while(i<=4){
+            LinkedList.appendNode(L1,i);
+            i++;
+        }
+        LinkedList.appendNode(L1,8);
+
+
+
+        i=7;
 		while(i>0){
 			LinkedList.appendNode(L2, rand.nextInt(10));
 			i--;
@@ -26,5 +34,9 @@ public class Demo {
 		//LinkedList.printList(L1);
 		System.out.println();
 		LinkedList.printList(LinkedList.sumLists(L1, L2));
+
+        System.out.println("\n******************************************");
+
+        System.out.println(LinkedList.isPalindrome(L1));
 	}
 }

@@ -19,15 +19,15 @@ public class Catalan {
 		int left=0,right=0,sum=0;
 		for(int i=2;i<=n;i++){
 			sum=0;
-			for(int j=1;j<=i;j++){
-				left=0;right=0;
+			for(int j=1;j<=i;j++){          // j can be considered as the root element among 1,2...->n elements.
+//				left=0;right=0;
 //				for(int k=1;k<=i;k++){
 //					if(k<j)
 //						left++;
 //					if(k>j)
 //						right++;
 //				}
-				sum=sum+dp[j-1]*dp[i-j];
+				sum=sum+dp[j-1]*dp[i-j];         // sum + (no. of ways in left subtree) * (no. of ways in right subtree)
 			}
 			dp[i]=sum;
 		}
