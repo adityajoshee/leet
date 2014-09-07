@@ -1,11 +1,15 @@
 package algorithms.search;
 
+/**
+ * Created by aditya.joshee on 07/08/14.
+ */
+
 public class BinarySearch {
 	public static void main(String[] args){
 		int[] list = new int[]{1,4,5,9,10,14,21,22,24,44,55};
-		System.out.println(search(list,14));
+		System.out.println("Position: "+search(list,14));
 	}
-	private static boolean search(int[] list,int searchElement){
+	private static int search(int[] list,int searchElement){
 	
 		int start=0;
 		int mid;
@@ -17,12 +21,12 @@ public class BinarySearch {
 				start=mid+1;
 			}
 			else if(searchElement==list[mid]){
-				return true;
+				return mid;
 			}
 			else{
 				end=mid-1;
 			}
 		}
-		return false;
+		return -1;
 	}
 }
