@@ -7,6 +7,9 @@ package algorithms;
  *
  * If there is staircase of n step and we can only take steps of 1,2 or 3 at a time then
  * how many ways are there to cover the whole staircase.
+ *
+ *
+ * DP can also be applied here.
  */
 public class NSteps {
     public static void main(String args[]){
