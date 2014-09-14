@@ -6,9 +6,11 @@ package dyprog;
 // Using j add the array elements
 // store the sum in 'sum' and check 'sum' with 'maxsum' with every addition
 
+// This algo : O(n*n) whereas kadane's algo : O(n)
+
 public class MSS {
 	public static void main(String args[]){
-		int[] list = {9 ,5 ,11 ,-24 ,-71 ,2, 6 ,8 ,-5 ,-42,11,28};
+		int[] list = {-9,4,-6,3,0,-2,15,-7,6};
 		System.out.println(subseqWithMaxSum(list));
 	}
 
