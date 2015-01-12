@@ -1,5 +1,8 @@
 package algorithms;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class RunLengthEncoding {
 	public static void main(String[] args){
 		System.out.println(encode("aabraacadaabraa"));

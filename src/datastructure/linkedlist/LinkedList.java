@@ -1,7 +1,5 @@
 package datastructure.linkedlist;
 
-import sun.awt.image.ImageWatched;
-
 public class LinkedList {
 	public static ListNode getNew(int data){
 		ListNode n = new ListNode(data);
@@ -132,5 +130,34 @@ public class LinkedList {
                 p=p.getNext();
             }
         return p;
+    }
+
+    /*
+    Merge two linked lists alternately using recursion
+     */
+    public static ListNode mergeAltRec(ListNode p,ListNode q){
+        if(p==null)
+            return q;
+        if(q==null)
+            return p;
+        ListNode t = p.getNext();
+        p.setNext(q);
+        mergeAltRec(q,t);
+        return  p;
+    }
+
+    /*
+    Merge two linked lists alternately using iteration
+    */
+    public static ListNode mergeAltLoop(ListNode p , ListNode q){
+        ListNode head = p;
+        ListNode t=null;
+        while(p!=null && q!=null){
+            t=p.getNext();
+            p.setNext(q);
+            p=q;
+            q=t;
+        }
+        return head;
     }
 }

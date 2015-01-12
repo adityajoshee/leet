@@ -30,6 +30,8 @@ public class Demo {
 		System.out.print("L2: ");LinkedList.printList(L2);
 		System.out.println();
 
+        System.out.println("Alternately Merged Lists: ");LinkedList.printList(LinkedList.mergeAltLoop(L1,L2));
+
 		//L1=LinkedList.recursiveReverse(L1);
 		//LinkedList.printList(L1);
 		System.out.println();

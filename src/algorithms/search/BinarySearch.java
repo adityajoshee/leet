@@ -18,13 +18,13 @@ public class BinarySearch {
 		while(start<=end){
 			mid=start+(end-start)/2;	// For every iteration mid will be updated.
 			if(searchElement>list[mid]){
-				start=mid+1;
+				start=mid+1;                 // Adding 1 is req.
 			}
-			else if(searchElement==list[mid]){
+			else if(searchElement==list[mid]){            // found the searchElement ... return true.
 				return mid;
 			}
 			else{
-				end=mid-1;
+				end=mid-1;                  // Sub 1 is req.
 			}
 		}
 		return -1;

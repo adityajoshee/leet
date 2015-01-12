@@ -1,7 +1,5 @@
 package algorithms;
 
-import java.util.Random;
-
 // Find an element in a rotated array
 
 public class RotatedArray {

@@ -1,9 +1,5 @@
 package datastructure.binarytree;
 
-import datastructure.linkedlist.ListNode;
-
-import java.util.List;
-
 public class BinaryTreeOps {
 	public static BinaryNode create(int x){
 		BinaryNode n = new BinaryNode();

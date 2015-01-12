@@ -95,7 +95,10 @@ public class BinarySearchTreeOps {
 			}
 		}
 	}
-	
+
+
+    // Print boundary of a binary tree :
+
 	public static void printBoundary(BinaryNode root){
 		System.out.println("\nBinary Tree Boundary :     ");
 		printPreorderLeftOnly(root);

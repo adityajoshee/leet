@@ -1,7 +1,5 @@
 package dyprog;
 
-import java.util.Arrays;
-
 public class LIS {
 
 	public static void main(String args[]){
