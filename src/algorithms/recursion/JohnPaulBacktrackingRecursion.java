@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.recursion;
 
 /**
  * Created by adityajoshee on 22/04/16.
@@ -7,7 +7,7 @@ public class JohnPaulBacktrackingRecursion {
 
     public static void main(String arg[]){
 
-        System.out.println(sequences(0,0,"",3));
+        System.out.println(sequences(0, 0, "", 3));
 
     }
 

@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.recursion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class GenerateParenthesisNPair {
         if(n<=0){
             return resultSet;
         }
-        System.out.println(helper(0,0,n,"",resultSet) + "valid parenthesis permuations:");
+        System.out.println(helper(0, 0, n, "", resultSet) + "valid parenthesis permuations:");
 
         return resultSet;
     }

@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.recursion;
 
 /**
  * Created by adityajoshee on 17/04/16.
