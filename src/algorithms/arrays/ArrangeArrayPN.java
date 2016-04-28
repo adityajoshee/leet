@@ -1,12 +1,11 @@
-package algorithms;
+package algorithms.arrays;
 
-// Given an array of binary 0/1 input, arrange such that
-// all 0s are left to 1s. ( in some other problem 0s can represent -ves and 1s can represent +ves)
-// O(n)
+// Arrange array such that all -ves are on left of all +ves
+// O(n) solution.
 
-public class ArrangeArray01 {
+public class ArrangeArrayPN {
 	public static void main(String args[]){
-		int[] input = new int[]{1,0,0,1,1,0,1,0,1,1,1,0};
+		int[] input = new int[]{-1,2,-4,6,3,-3,1,0,-5,-7,-1,9,-2};
 		arrangeArray(input);
 		int i=0;
 		while(i<input.length)
@@ -16,16 +15,16 @@ public class ArrangeArray01 {
 		int r = A.length-1;
 		int l = 0;
 		while(l<=r){
-			if(A[l]==1 && A[r]==0){
+			if(A[l]>=0 && A[r]<0){
 				swap(A,r,l);
 			}
-			else if(A[l]==0 && A[r]==1){
+			else if(A[l]<0 && A[r]>=0){
 				l++; r--;
 			}
-			else if(A[l]==1 && A[r]==1){
+			else if(A[l]>=0 && A[r]>=0){
 				r--;
 			}
-			else if(A[l]==0 && A[r]==0){
+			else if(A[l]<0 && A[r]<0){
 				l++;
 			}
 		}

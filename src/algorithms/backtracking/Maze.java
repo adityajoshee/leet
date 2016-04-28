@@ -6,32 +6,42 @@ package algorithms.backtracking;
 public class Maze {
     public static void main(String args[]){
         int[][] maze = initBoard(4);
-        maze[0][1] = maze[0][2] = maze[0][3] = maze[1][2]=maze[2][0]=maze[2][3]=0; // blocks
+        maze[0][1] = maze[0][2] = maze[0][3]=maze[2][3]=0; // blocks
         printCurrentBoard(maze);
-        generateWayOut(maze,0,0,"0,0"); // 0,0 is starting position
+        int[][] sol = new int[4][4];
+        sol[0][0]=1;
+        generateWayOut(maze,0,0,"0,0",sol); // 0,0 is starting position
+
     }
 
-    private static void generateWayOut(int[][] maze,int i,int j,String moves){
+    private static void generateWayOut(int[][] maze,int i,int j,String moves,int[][] sol){
         if(i==maze.length-1 && j==maze.length-1 && maze[i][j]==1){
             // out of maze
             System.out.println(" OUT! ");
             System.out.println(moves);
+            printCurrentBoard(sol);
+
             return;
         }
-        if(i+1<maze.length){
-            if(maze[i+1][j]==1){
-                generateWayOut(maze,i+1,j,moves+" -> "+(i+1)+","+(j));
-            }
+        if(validMove(i+1,j,maze)){
+            sol[i+1][j]=1;
+            generateWayOut(maze,i+1,j,moves+" -> "+(i+1)+","+(j),sol);
+            sol[i+1][j]=0;
         }
 
-        if(j+1<maze.length){
-            if(maze[i][j+1]==1){
-                generateWayOut(maze,i,j+1,moves+" -> "+(i)+","+(j+1));
-            }
-        }
 
+        if(validMove(i,j+1,maze)){
+            sol[i][j+1]=1;
+            generateWayOut(maze,i,j+1,moves+" -> "+(i)+","+(j+1),sol);
+
+        }
         return;
+    }
 
+    private static boolean validMove(int x, int y, int[][] maze){
+        if(x<maze.length && y<maze.length && maze[x][y]==1)
+            return true;
+        return false;
     }
 
     private static int[][] initBoard(int n){

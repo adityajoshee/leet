@@ -10,6 +10,13 @@ package algorithms.recursion;
  *
  *
  * DP can also be applied here.
+ *
+ *
+ *
+ * The given soln is a TOP TO BOTTOM approach.
+ *
+ *
+ *
  */
 public class NSteps {
     public static void main(String args[]){
@@ -19,6 +26,7 @@ public class NSteps {
 
     public static int stepdown(int n){
         if(n<0){
+            System.out.println("oops ...n="+n);
             return 0;
         }
         if(n==0 || n==1){ // means either the steps are over or only 1 step is left which can be covered only in 1 way.

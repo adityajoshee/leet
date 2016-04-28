@@ -1,4 +1,4 @@
-package dyprog;
+package algorithms.dp;
 
 public class Knapsack {
 

@@ -1,4 +1,4 @@
-package dyprog;
+package algorithms.dp;
 
 /**
  * Created by aditya.joshee on 07/09/14.

@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.arrays;
 
 // Find an element in a rotated array
 

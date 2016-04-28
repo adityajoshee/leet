@@ -1,4 +1,4 @@
-package dyprog;
+package algorithms.dp;
 // 1 2 3 -4 -1 2 9 8 -5 -2 1 8
 
 // Index i will iterate over the entire array 

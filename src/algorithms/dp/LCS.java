@@ -1,4 +1,4 @@
-package dyprog;
+package algorithms.dp;
 
 import java.util.Arrays;
 
