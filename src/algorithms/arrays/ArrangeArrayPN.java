@@ -1,5 +1,7 @@
 package algorithms.arrays;
 
+// Easy
+
 // Arrange array such that all -ves are on left of all +ves
 // O(n) solution.
 

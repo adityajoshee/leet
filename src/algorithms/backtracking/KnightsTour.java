@@ -20,6 +20,8 @@ public class KnightsTour {
             return;
         }
 
+        // We can also consolidate the code below by using a pair of array for x and y moves each and looping over it.
+
         if(isValidMove(currentBoard,x-2,y-1)){
             currentBoard[x-2][y-1] = steps+1;
             knightsTour(currentBoard,x-2,y-1,steps+1);
@@ -44,9 +46,6 @@ public class KnightsTour {
             knightsTour(currentBoard, x+2, y+1, steps + 1);
             currentBoard[x+2][y+1] = -1;
         }
-
-
-
 
 
         if(isValidMove(currentBoard,x-1,y-2)){

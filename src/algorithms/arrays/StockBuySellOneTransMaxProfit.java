@@ -18,7 +18,7 @@ public class StockBuySellOneTransMaxProfit {
     // p = 8, b = 1
 
     private static int findMaxProfitForSingleTrans(int[] dayPrices){
-        int currentMaxProfit = Integer.MIN_VALUE;
+        int currentMaxProfit = 0;
         int currentMinBuyPrice = dayPrices[0];
 
         for(int i=0; i<dayPrices.length; i++){

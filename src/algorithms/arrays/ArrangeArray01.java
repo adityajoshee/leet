@@ -1,5 +1,7 @@
 package algorithms.arrays;
 
+// Easy
+
 // Given an array of binary 0/1 input, arrange such that
 // all 0s are left to 1s. ( in some other problem 0s can represent -ves and 1s can represent +ves)
 // O(n)

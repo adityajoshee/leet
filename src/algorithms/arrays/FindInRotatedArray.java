@@ -1,8 +1,10 @@
 package algorithms.arrays;
 
 // Find an element in a rotated array
+// Need log(N) approach
 
-public class RotatedArray {
+
+public class FindInRotatedArray {
 	public static void main(String[] args){
 		int[] list = new int[50];
 		for(int i=0;i<list.length;i++){
