@@ -77,16 +77,7 @@ public class LinkedList {
 		current.setData(sum);
 		return carry;
 	}
-	public static ListNode recursiveReverse(ListNode head){
-		ListNode result;
-		if(!(head!=null && head.getNext()!=null)){
-			return head;
-		}
-		result=recursiveReverse(head.getNext());
-		head.getNext().setNext(head);
-		head.setNext(null);
-		return result;
-	}
+
 	public static int countNodes(ListNode head){
 		int i=0;
 		while(head!=null){
@@ -161,5 +152,99 @@ public class LinkedList {
         return head;
     }
 
+	// can't change original lists
+	public static  ListNode addTwoLists(ListNode a, ListNode b){
+		int sizeA = LinkedList.countNodes(a);
+		int sizeB = LinkedList.countNodes(b);
+		ListNode tempA = a;
+		ListNode tempB = b;
+		ListNode biggerList = null;
+		if(sizeA>sizeB){
+			biggerList = a;
+			int diff = sizeA-sizeB;
+			while(diff!=0){
+				tempA = tempA.getNext();
+				diff--;
+			}
+		}
+		else if(sizeB>sizeA){
+			biggerList = b;
+			int diff = sizeB - sizeA;
+			while(diff!=0){
+				tempB = tempB.getNext();
+				diff--;
+			}
+		}
 
+		// Now tempA and tempB both have same size;
+		CarryWrapper carry = new CarryWrapper();
+		ListNode tempSumList = addListsWithSameSize(tempA,tempB,carry);
+		if(biggerList==null){
+			if(carry.val>0){
+				ListNode n = new ListNode(carry.val);
+				n.setNext(tempSumList);
+				return  n;
+			}
+			else{
+				return tempSumList;
+			}
+		}
+		else{
+			// TODO
+		}
+		return null;
+	}
+	public static ListNode addListsWithSameSize(ListNode x, ListNode y, CarryWrapper carry){
+		if(x==null || y==null){
+			return null;
+		}
+		ListNode t = addListsWithSameSize(x.getNext(),y.getNext(),carry);
+		ListNode n = new ListNode();
+		int data = (x.getData()+y.getData()+carry.val)%10;
+		carry.val = (x.getData()+y.getData()+carry.val)/10;
+		n.setData(data);
+		n.setNext(t);
+		return n;
+	}
+
+	public static ListNode reverse(ListNode list)
+	{
+		if (list == null) return null; // first question
+
+		if (list.getNext() == null) return list; // second question
+
+		ListNode x = reverse(list.getNext());
+		list.getNext().setNext(list);
+		list.setNext(null);
+		return x;
+	}
+
+	// return new head
+	public static ListNode reverseInPair(ListNode n){
+		if(n==null || n.getNext()==null){
+			return n;
+		}
+		ListNode rest = n.getNext().getNext();
+		ListNode h = n.getNext();
+		n.getNext().setNext(n);
+		n.setNext(reverseInPair(rest));
+		return h;
+	}
+
+	public static ListNode reverseK(ListNode n, int k){
+		if(n==null || n.getNext()==null){
+			return n;
+		}
+		int i=0;
+		ListNode curr = n;
+		ListNode prev = null;
+		while(n!=null && i++<k){
+			ListNode t = n.getNext();
+			n.setNext(prev);
+			prev = n;
+			n = t;
+		}
+		curr.setNext(reverseK(n,k));
+		return prev;
+	}
 }

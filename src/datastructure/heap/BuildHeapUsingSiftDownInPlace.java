@@ -25,7 +25,7 @@ public class BuildHeapUsingSiftDownInPlace {
 	}
 
 
-    private static void  buildHeap(int[] inputArray){
+    public static void  buildHeap(int[] inputArray){
         int tempParentIndex = (inputArray.length-1)/2;
         while(tempParentIndex>=0){
             siftDown(inputArray, tempParentIndex);

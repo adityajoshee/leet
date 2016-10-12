@@ -1,5 +1,7 @@
 package practice;
 
+import java.util.HashMap;
+
 /**
  * Created by adityajoshee on 13/04/16.
  */

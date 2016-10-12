@@ -48,4 +48,8 @@ public class BinaryNode {
         this.right = new BinaryNode(rightValue);
         return this.right;
     }
+
+    public String toString(){
+        return this==null?null:data+"";
+    }
 }

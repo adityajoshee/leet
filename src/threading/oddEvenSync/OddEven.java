@@ -21,7 +21,11 @@ public class OddEven {
         public void run(){
             int c=1;
             while(c<=k){
-                p.print(c);
+                try {
+                    p.print(c);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 c=c+2;
             }
         }
@@ -35,7 +39,11 @@ public class OddEven {
         public void run(){
             int c=0;
             while(c<=k){
-                p.print(c);
+                try {
+                    p.print(c);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 c=c+2;
             }
         }

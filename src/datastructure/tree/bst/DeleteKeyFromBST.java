@@ -42,8 +42,10 @@ public class DeleteKeyFromBST {
         }
         else{
             // find the key
-            node.setLeft(execute(node.getLeft(),key));
-            node.setRight(execute(node.getRight(),key));
+            if(key<node.getData())
+                node.setLeft(execute(node.getLeft(),key));
+            else
+                node.setRight(execute(node.getRight(),key));
         }
         return node;
     }

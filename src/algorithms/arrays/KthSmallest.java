@@ -14,6 +14,7 @@ public class KthSmallest {
 
     private static int kthSmallest(int k, int[] arr, int left, int right){
 
+
         if(k-1>arr.length-1){ // required index > max index of array
             return -1;
         }

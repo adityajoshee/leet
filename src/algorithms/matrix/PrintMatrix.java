@@ -6,7 +6,7 @@ package algorithms.matrix;
 public class PrintMatrix {
     public static void print(int[][] c){
         for (int i=0;i<c.length;i++){
-            for(int j=0;j<c.length;j++){
+            for(int j=0;j<c[0].length;j++){
                 System.out.print(" "+c[i][j]);
             }
             System.out.println();

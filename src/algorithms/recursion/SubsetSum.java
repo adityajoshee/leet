@@ -5,8 +5,8 @@ package algorithms.recursion;
  */
 public class SubsetSum {
     public static void main(String args[]){
-        int[] input = {3, 34, 4, 12, 5, 2};
-        printSubsetsWithSum(input,9,0,"");
+        int[] input = {4,3,2,8,6,1,7};//{3, 34, 4, 12, 5, 2};
+        printSubsetsWithSum(input,19,0,"");
     }
     private static boolean printSubsetsWithSum(int[] arr, int sumLeft, int start, String set){
         //System.out.println("sumleft:"+sumLeft+"  start:"+start+"  set:"+set);

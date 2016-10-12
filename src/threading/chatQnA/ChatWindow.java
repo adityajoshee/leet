@@ -18,8 +18,6 @@ public class ChatWindow {
         Thread.sleep(500);
         hasAgentAnswered=false;
         notify();
-
-
     }
     public synchronized void reply(String msg) throws Exception{
         if (hasAgentAnswered){
@@ -29,8 +27,5 @@ public class ChatWindow {
         Thread.sleep(1000);
         hasAgentAnswered=true;
         notify();
-
     }
-
-
 }

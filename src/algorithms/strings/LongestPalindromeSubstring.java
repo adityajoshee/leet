@@ -10,7 +10,7 @@ package algorithms.strings;
 public class LongestPalindromeSubstring {
 
     public static void main(String[] a){
-        String input = "ALITXTILXP";
+        String input = "CBBAKKABBCXLITOTILXD";
         char[] ip=input.toCharArray();
         //System.out.print(isPalindrome(ip,0,ip.length-1));
         if(ip.length>1){

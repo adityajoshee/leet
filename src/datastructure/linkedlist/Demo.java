@@ -12,11 +12,11 @@ public class Demo {
 			LinkedList.appendNode(L1,i);
 			i--;
 		}
-        while(i<=4){
+        while(i<=2){
             LinkedList.appendNode(L1,i);
             i++;
         }
-        LinkedList.appendNode(L1,8);
+        //LinkedList.appendNode(L1,8);
 
 
 
@@ -29,16 +29,36 @@ public class Demo {
 		System.out.println();
 		System.out.print("L2: ");LinkedList.printList(L2);
 		System.out.println();
+		System.out.println("\n******************************************");
 
-        System.out.println("Alternately Merged Lists: ");LinkedList.printList(LinkedList.mergeAltLoop(L1,L2));
+		LinkedList.printList(LinkedList.reverse(L2));
+		System.out.println("\n******************************************");
+
+		LinkedList.printList(LinkedList.sumLists(L1, L2));
+		System.out.println("\n******************************************");
+
+		LinkedList.printList(LinkedList.addTwoLists(L1,L2));
+
+        System.out.println("\nAlternately Merged Lists: ");LinkedList.printList(LinkedList.mergeAltLoop(L1,L2));
 
 		//L1=LinkedList.recursiveReverse(L1);
 		//LinkedList.printList(L1);
 		System.out.println();
-		LinkedList.printList(LinkedList.sumLists(L1, L2));
 
         System.out.println("\n******************************************");
 
         System.out.println(LinkedList.isPalindrome(L1));
+
+		ListNode L3 = LinkedList.getNew(1);
+		int x=2;
+		while(x<=8){
+			LinkedList.appendNode(L3,x);
+			x++;
+		}
+		LinkedList.printList(L3);
+		ListNode xx = LinkedList.reverseK(L3,3);
+		System.out.println();
+		LinkedList.printList(xx);
+
 	}
 }

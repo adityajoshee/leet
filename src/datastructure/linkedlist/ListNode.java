@@ -1,7 +1,5 @@
 package datastructure.linkedlist;
 
-import algorithms.dp.LIS;
-
 public class ListNode {
 	private int data;
 	private ListNode next;

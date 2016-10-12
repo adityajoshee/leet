@@ -22,9 +22,9 @@ public class MaxSubMatrixOf1s {
         for (int i = 0; i < matrix.length; i++) {
             aux[i][0] = matrix[i][0];
         }
-        System.out.println(find(matrix, aux));
+        find(matrix, aux);
     }
-    private static CoordinateAndSize find(int[][] matrix, int[][] aux){
+    private static void find(int[][] matrix, int[][] aux){
         int min=0;
         for(int i=1; i<aux.length; i++){
             for(int j=1; j<aux[0].length; j++){
@@ -35,14 +35,11 @@ public class MaxSubMatrixOf1s {
                     min = Math.min(Math.min(l,u),d);
                     aux[i][j] = matrix[i][j] + min;
                 }
+                else{
+                    // do nothing for 0 cell value
+                }
             }
         }
         PrintMatrix.print(aux);
-        return null;
-    }
-    private static class CoordinateAndSize{
-        int x;
-        int y;
-        int size;
     }
 }

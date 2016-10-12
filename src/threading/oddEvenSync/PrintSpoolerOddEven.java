@@ -11,14 +11,15 @@ public class PrintSpoolerOddEven implements IPrinter {
     odd and even sequentially by 2 threads;
      */
 
-    public synchronized void print(int k){
+    public synchronized void print(int k) throws InterruptedException {
 
         System.out.print(k+"  ");
+        Thread.sleep(500);
         try{
             notify();
             wait();
         }
-        catch (InterruptedException e){
+        catch (Exception e){
             System.err.print("error...");
         }
     }

@@ -1,5 +1,7 @@
 package datastructure.tree;
 
+import datastructure.linkedlist.DLLNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -342,5 +344,30 @@ public class BinaryTree {
             return true;
         }
         return false;
+    }
+
+    public DLLNode convertToDoublyLinkedList(){
+        DLLNode node  = convertToDLL(root,new DLLNode[]{null});
+        while(node!=null && node.getPrevious()!=null){
+            node = node.getPrevious();
+        }
+        return node;
+    }
+
+    // return DLL node which corresponds to the root of the tree (might not be left or right most in DLL.)
+    private DLLNode convertToDLL(BinaryNode node, DLLNode[] prevDLL){
+        if(node==null){
+            return null;
+        }
+        DLLNode tempDLL = convertToDLL(node.getLeft(),prevDLL);
+        DLLNode dllNode = new DLLNode(node.getData());
+
+        dllNode.setPrevious(prevDLL[0]);
+        if(prevDLL[0]!=null) {
+            prevDLL[0].setNext(dllNode);
+        }
+        prevDLL[0] = dllNode;
+        DLLNode nextDLLNode = convertToDLL(node.getRight(),prevDLL);
+        return dllNode;
     }
 }

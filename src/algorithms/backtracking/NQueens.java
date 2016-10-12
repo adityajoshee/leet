@@ -16,18 +16,18 @@ public class NQueens {
             printCurrentBoard(currentBoard);
             return;
         }
-            for(int j=0;j<=boardSize-1;j++){
-                if(isValidPosition(currentBoard,row,j,boardSize)){
-                    currentBoard[row][j]=1;
-                    //printCurrentBoard(currentBoard);
-                    nqueens(currentBoard, boardSize, row + 1);
-                    currentBoard[row][j]=0;
-                }
-                else{
-                    if(j==boardSize-1)
-                        return;
-                }
+        for(int j=0;j<=boardSize-1;j++){
+            if(isValidPosition(currentBoard,row,j,boardSize)){
+                currentBoard[row][j]=1;
+                //printCurrentBoard(currentBoard);
+                nqueens(currentBoard, boardSize, row + 1);
+                currentBoard[row][j]=0;
             }
+            else{
+                if(j==boardSize-1)
+                    return;
+            }
+        }
 
 
     }

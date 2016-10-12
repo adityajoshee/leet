@@ -36,13 +36,15 @@ public class LRU {
 
         if (pre != null) {
             pre.next = post;
-        } else {
+        }
+        else { // nothing is before the node getting removed.
             head = post;
         }
 
         if (post != null) {
             post.pre = pre;
-        } else {
+        }
+        else { // nothing is after the node getting removed.
             end = pre;
         }
     }
@@ -65,21 +67,22 @@ public class LRU {
             DoubleLinkedListNode oldNode = map.get(key);
             oldNode.val = value;
             removeNode(oldNode);
-            setHead(oldNode);
-        } else {
+            setHead(oldNode);  // since currently accessed node must come to head of DLL
+        }
+        else {
             DoubleLinkedListNode newNode =
                     new DoubleLinkedListNode(key, value);
             if (len < capacity) {
-                setHead(newNode);
+                setHead(newNode); // since currently accessed node must come to head
                 map.put(key, newNode);
                 len++;
-            } else {
-                map.remove(end.key);
+            }
+            else {
+                map.remove(end.key); // LRU algo i.e. remove least recently used (which is at end of DLL)
                 end = end.pre;
                 if (end != null) {
                     end.next = null;
                 }
-
                 setHead(newNode);
                 map.put(key, newNode);
             }
@@ -92,7 +95,6 @@ class DoubleLinkedListNode {
     public int key;
     public DoubleLinkedListNode pre;
     public DoubleLinkedListNode next;
-
     public DoubleLinkedListNode(int key, int value) {
         val = value;
         this.key = key;
