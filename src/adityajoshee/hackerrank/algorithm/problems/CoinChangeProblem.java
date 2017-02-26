@@ -36,7 +36,7 @@ public class CoinChangeProblem {
 
         for (int i = 1; i <= sum; i++) {
             for (int j = 1; j <= coins.length; j++) {
-                // only coins till coins[j] are available for sum = i
+                // only coins till coins[j-1] are available for sum = i
                 if(i>=coins[j-1]){
                     aux[i][j] = aux[i-coins[j-1]][j] + aux[i][j-1];
                 }

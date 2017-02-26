@@ -7,14 +7,13 @@ import java.util.Iterator;
  */
 public class DetectCycleDirectedGraph {
     public static void main(String args[]){
-        DirectedGraph g = new DirectedGraph(3);
+        DirectedGraph g = new DirectedGraph(4);
         g.addEdgeFrom(0,1);
-        g.addEdgeFrom(1,2);
-        g.addEdgeFrom(2,0);
-//        g.addEdgeFrom(0, 1);
-//        g.addEdgeFrom(1, 2);
-//        g.addEdgeFrom(0, 2);
-//        g.addEdgeFrom(2, 3);
+        g.addEdgeFrom(0,2);
+        g.addEdgeFrom(1,3);
+        g.addEdgeFrom(2,3);
+        g.addEdgeFrom(3,0);
+
         System.out.println(hasCycle(g));
     }
     private static boolean hasCycle(DirectedGraph dg){
@@ -39,10 +38,11 @@ public class DetectCycleDirectedGraph {
             if (stack[i]==1){
                 return true;
             }
-            if(visited[i]!=1 && visit(dg, i, visited,stack)){
-                return true;
+            if(visited[i]!=1){
+                if(visit(dg, i, visited,stack)){
+                    return true;
+                }
             }
-
         }
         stack[currentVertex] = 0;
         return false;

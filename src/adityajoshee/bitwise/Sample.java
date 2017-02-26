@@ -11,11 +11,11 @@ public class Sample {
         int typeId = 1;
         int localId = 7075733;
 
-        System.out.println(Long.toBinaryString(shardId));
+        System.out.println(Long.toBinaryString(shardId << 20));
         System.out.println(Long.toBinaryString(typeId));
         System.out.println(Long.toBinaryString(localId));
 
-        int uid =  shardId << 46 | typeId << 36 | localId << 0;
+        int uid =  shardId << 96 | typeId << 56 | localId << 0;
         System.out.println(Long.toBinaryString(uid));
         System.out.println(uid);
     }

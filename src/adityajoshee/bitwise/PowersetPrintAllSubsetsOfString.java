@@ -13,8 +13,7 @@ public class PowersetPrintAllSubsetsOfString {
         }
         int decimalValue = Integer.parseInt(stringBuffer.toString(), 2);
         for (int i = 0; i <= decimalValue; i++) {
-            String binary = Integer.toBinaryString(i);
-            char[] mask = binary.toCharArray();
+            char[] mask = Integer.toBinaryString(i).toCharArray();
             for (int j = 0; j < mask.length; j++) {
                 if (mask[j]=='1'){
                     System.out.print(chars[j+(chars.length-mask.length)]);
