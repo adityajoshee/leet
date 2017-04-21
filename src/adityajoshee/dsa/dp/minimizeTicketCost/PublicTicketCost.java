@@ -5,9 +5,9 @@ package adityajoshee.dsa.dp.minimizeTicketCost;
  */
 public class PublicTicketCost {
     public static void main(String args[]){
-        int[] arr  =  {1,7,8,9,10,15,16,17,18,21,25};
-        int[] tDays = {1,7,30};
-        int[] tCost = {2,7,25};
+        int[] arr  =  {1,2,4,5,7,8,9,10,11,12,29,30};//{1,7,8,9,10,15,16,17,18,21,25};
+        int[] tDays = {1,7,30};//{1,7,30}; // number of days for which the ith ticket type is valid.
+        int[] tCost = {2,7,25};// cost of the ith ticket.
         System.out.println(minCost(arr, tDays, tCost));
     }
     public static int minCost(int[] arr, int[] tDays, int[] tCost) {

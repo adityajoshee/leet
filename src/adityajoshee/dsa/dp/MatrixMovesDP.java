@@ -9,8 +9,8 @@ public class MatrixMovesDP {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter row,column:");
-        int r = in.nextInt();
         int c = in.nextInt();
+        int r = in.nextInt();
         System.out.println("No. of ways: " + countMoves(r, c));
     }
 

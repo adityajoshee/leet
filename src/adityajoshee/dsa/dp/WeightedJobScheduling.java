@@ -1,4 +1,4 @@
-package adityajoshee.dsa.dp.weightedJobScheduling;
+package adityajoshee.dsa.dp;
 
 import adityajoshee.dsa.matrix.PrintMatrix;
 

@@ -8,8 +8,8 @@ import adityajoshee.dsa.datastructure.tree.binary.BinaryTree;
  */
 
 
-// for a bst replace all nodes with sum of nodes greater that node and the node itself
-public class ReplaceNodesWithSumOfAllGreater {
+// for a bst replace all nodes with sum of nodes greater that or equal to the node itself
+public class ReplaceNodesWithSumOfAllGreaterOrEqualNodes {
     public static void main(String args[]){
         BinaryNode root = new BinaryNode(5);
         BinaryTree bst = new BinaryTree(root);
@@ -33,4 +33,5 @@ public class ReplaceNodesWithSumOfAllGreater {
         n.setData(sum.val);
         update(n.getLeft(),sum);
     }
+
 }

@@ -8,7 +8,7 @@ package adityajoshee.dsa.array;
 public class MaximizeProfitFromStocks {
     public static void main(String args[]){
         // multiple transactions allowed...
-        int[] prices = {5,4,1};//{5,2,3,10,6,4,8};
+        int[] prices = {1,4,5};//{5,2,3,10,6,4,8};
         System.out.println(exec(prices));
     }
     private static int exec(int[] prices){

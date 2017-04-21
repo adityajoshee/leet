@@ -10,7 +10,7 @@ import adityajoshee.dsa.matrix.PrintMatrix;
 public class EvenSubstringSumEvenHalf {
     
     public static void main(String args[]){
-        int[] arr = {1,0,0,1,3,0,4,0};
+        int[] arr = {1,5,3,8,0,2,3};//{1,0,0,1,3,0,4,0};
         System.out.println(longestLength(arr));
     }
     private static int longestLength(int[] arr){

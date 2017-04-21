@@ -20,24 +20,25 @@ public class TopologicalSort {
         System.out.println(Arrays.toString(topologicalSort(dag).toArray()));
     }
     private static LinkedList<Integer> topologicalSort(DirectedGraph dag){
-        int visited[] = new int[dag.adj.length];
-        LinkedList<Integer> sortedList = new LinkedList<>();
+        boolean visited[] = new boolean[dag.adj.length];
+        LinkedList<Integer> topoSortedList = new LinkedList<>();
         for (int i = 0; i < dag.adj.length; i++) {
-            if (visited[i]==0){
-                visitDag(dag, i, visited,sortedList);
+            if (!visited[i]){
+                visitDag(dag, i, visited,topoSortedList);
             }
         }
-        return sortedList;
+        return topoSortedList;
     }
-    private static void visitDag(DirectedGraph dag, int currentVertex, int[] visited, LinkedList<Integer> sortedList){
-        visited[currentVertex] = 1;
+    private static void visitDag(DirectedGraph dag, int currentVertex, boolean[] visited, LinkedList<Integer> sortedList){
+        visited[currentVertex] = true;
         Iterator<Integer> itr = dag.adj[currentVertex].iterator();
         while (itr.hasNext()){
             int i = itr.next();
-            if (visited[i]==0){
+            if (!visited[i]){
                 visitDag(dag,i,visited,sortedList);
             }
         }
+        // all adjacent vertices for currentVertex are visited, so now the currentVertex can be put to dag list.
         sortedList.push(currentVertex);
     }
 

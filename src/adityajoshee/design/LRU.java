@@ -6,12 +6,11 @@ package adityajoshee.design;
 import java.util.HashMap;
 
 public class LRU {
-    private HashMap<Integer, DoubleLinkedListNode> map
-            = new HashMap<Integer, DoubleLinkedListNode>();
+    private HashMap<Integer, DoubleLinkedListNode> map = new HashMap<>();
     private DoubleLinkedListNode head;
     private DoubleLinkedListNode end;
     private int capacity;
-    private int len;
+    private int len; // actual filled size
 
     public LRU(int capacity) {
         this.capacity = capacity;

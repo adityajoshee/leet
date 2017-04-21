@@ -1,6 +1,6 @@
 package adityajoshee.dsa.dp.minimizeTicketCost;
 
-public class OtherSolution
+public class PublicTicketCostOtherSolution
 {
     public static void main (String[] args)
     {

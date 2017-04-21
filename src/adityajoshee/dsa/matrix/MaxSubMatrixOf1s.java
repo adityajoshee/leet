@@ -5,6 +5,9 @@ package adityajoshee.dsa.matrix;
  */
 
 //http://www.geeksforgeeks.org/maximum-size-sub-matrix-with-all-1s-in-a-binary-matrix/
+
+    //Maximum size square sub-matrix with all 1s
+
 public class MaxSubMatrixOf1s {
     public static void main(String args []){
         int[][] matrix = new int[][] {
