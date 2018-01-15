@@ -1,5 +1,7 @@
 package adityajoshee.dsa.dp;
 
+import adityajoshee.problems.PairSum;
+
 /**
  * Created by aditya.j on 4/9/17.
  */
@@ -10,9 +12,13 @@ Given a positive integer N, count all possible distinct binary strings of length
  */
 public class NumberOfBinaryStringsWithNoConsecutive1 {
     public static void main(String args[]){
-        int N = 5;
+        int N = 2;
         System.out.println(find(N));
+        // other way:
+        System.out.print(count(N-1,1)+count(N-1, 0));
     }
+
+    //low complexity = n
     private static int find(int n){
         int[] zeroEnding = new int[n+1];
         int[] oneEnding = new int[n+1];
@@ -25,5 +31,18 @@ public class NumberOfBinaryStringsWithNoConsecutive1 {
             oneEnding[i] = zeroEnding[i-1];
         }
         return zeroEnding[n]+oneEnding[n];
+    }
+
+    // high complexity = 2^n
+    private static int count(int n, int last){
+        if (n==0) {
+            return 1;
+        }
+        if (last==1){
+            return count(n-1, 0);
+        }
+        else{ // last==0
+            return count(n-1,1)+count(n-1,0);
+        }
     }
 }

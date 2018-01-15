@@ -372,4 +372,23 @@ public class BinaryTree {
         prevDLL[0] = dllNode;
         convertToDLL(node.getRight(),prevDLL);
     }
+
+
+
+    public static BinaryTree getSampleBST(){
+        BinaryNode root = new BinaryNode(10);
+        BinaryTree bst = new BinaryTree(root);
+        root.setLeft(5);
+        root.setRight(15);
+        root.getLeft().setLeft(0);
+        root.getLeft().setRight(7);
+        root.getLeft().getRight().setLeft(6);
+        root.getLeft().getRight().setRight(9);
+
+        root.getRight().setLeft(12);
+        root.getRight().setRight(20);
+        root.getRight().getLeft().setLeft(11);
+        root.getRight().getLeft().setRight(14);
+        return bst;
+    }
 }

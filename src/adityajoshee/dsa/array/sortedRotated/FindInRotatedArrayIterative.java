@@ -1,10 +1,10 @@
-package adityajoshee.dsa.array;
+package adityajoshee.dsa.array.sortedRotated;
 
 // Find an element in a rotated array
 // Need log(N) approach
 
 
-public class FindInRotatedArray {
+public class FindInRotatedArrayIterative {
 	public static void main(String[] args){
 		int[] arr = new int[10];
 		for(int i=0;i<arr.length;i++){

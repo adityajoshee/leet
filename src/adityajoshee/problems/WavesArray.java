@@ -11,7 +11,7 @@ import java.util.Arrays;
  */
 public class WavesArray {
     public static void main(String args[]){
-        int[] arr = {4,5,6,1,9,8,8,2,1,0};
+        int[] arr = {1,2,0,-1,3};//{4,5,6,1,9,8,2,1,0};
         arr = getWavicurve(arr);
         System.out.println(Arrays.toString(arr));
     }

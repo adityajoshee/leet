@@ -1,5 +1,7 @@
 package adityajoshee.dsa.dp.minimizeTicketCost;
 
+import java.util.Arrays;
+
 /**
  * Created by aditya on 11/10/16.
  */
@@ -8,7 +10,7 @@ public class PublicTicketCost {
         int[] arr  =  {1,2,4,5,7,8,9,10,11,12,29,30};//{1,7,8,9,10,15,16,17,18,21,25};
         int[] tDays = {1,7,30};//{1,7,30}; // number of days for which the ith ticket type is valid.
         int[] tCost = {2,7,25};// cost of the ith ticket.
-        System.out.println(minCost(arr, tDays, tCost));
+        System.out.println(minCost2(arr, tDays, tCost));
     }
     public static int minCost(int[] arr, int[] tDays, int[] tCost) {
         int[][] dp = new int[arr.length][tDays.length];
@@ -46,6 +48,17 @@ public class PublicTicketCost {
                 return k;
             }
         }
+        return -1;
+    }
+
+
+
+    public static int minCost2(int[] arr, int[] validFor, int[] cost){
+        boolean[] travel = new boolean[31];
+        for (int i = 0; i < arr.length; i++) {
+            travel[arr[i]] = true;
+        }
+        System.out.println(Arrays.toString(travel));
         return -1;
     }
 }

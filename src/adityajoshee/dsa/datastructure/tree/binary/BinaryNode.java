@@ -62,4 +62,7 @@ public class BinaryNode {
     public String toString(){
         return this==null?null:data+"";
     }
+
+
+
 }
