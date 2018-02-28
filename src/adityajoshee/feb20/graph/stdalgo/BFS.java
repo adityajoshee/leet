@@ -29,11 +29,11 @@ public class BFS {
     }
 
     private static void visit(Graph g, int inode, int[] visited,Queue queue){
-        visited[inode] = 1;
         queue.add(inode);
 
         while (!queue.isEmpty()){
             Integer hnode = (Integer) queue.poll();
+            visited[inode] = 1;
             System.out.print(hnode+" ");
             if (g.adj[hnode]!=null){
                 Iterator<Integer> iterator = g.adj[hnode].iterator();

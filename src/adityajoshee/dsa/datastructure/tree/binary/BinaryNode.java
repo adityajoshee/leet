@@ -63,6 +63,8 @@ public class BinaryNode {
         return this==null?null:data+"";
     }
 
-
+    public boolean hasBothChildren(){
+        return right!=null && left!=null;
+    }
 
 }

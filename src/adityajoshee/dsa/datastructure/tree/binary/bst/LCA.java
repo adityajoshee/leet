@@ -23,7 +23,7 @@ public class LCA {
         root.getRight().getLeft().setLeft(11);
         root.getRight().getLeft().setRight(14);
         //bst.inorder();
-        System.out.println(findLca(bst.getRoot(),6,0));
+        System.out.println(findLca(bst.getRoot(),15,12));
     }
     private static BinaryNode findLca(BinaryNode node, int a, int b){
         if (node==null){
