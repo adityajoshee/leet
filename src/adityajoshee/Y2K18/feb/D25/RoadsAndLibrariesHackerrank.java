@@ -14,7 +14,7 @@ public class RoadsAndLibrariesHackerrank {
         int q = scanner.nextInt();
         for (int i = 0; i < q; i++) {
             int n = scanner.nextInt(); // number of cities
-            int m = scanner.nextInt(); //number of roads
+            int m = scanner.nextInt(); //number of possible roads
             long clib = scanner.nextLong();
             long croad = scanner.nextLong();
             UndirectedGraph city = new UndirectedGraph(n);

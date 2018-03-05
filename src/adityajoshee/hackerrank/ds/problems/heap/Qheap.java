@@ -93,14 +93,14 @@ public class Qheap {
         private int isSiftDownReq(int index){
             int l = getLeftChildIndex(index);
             int r = getRightChildIndex(index);
-            if(l==-1 && r==-1){
+            if(l==-1 && r==-1){ // if l is -1 then r has to be -1
                 return -1;
             }
 
-            if(r==-1)
+            if(r==-1)  // if only r is -1, i.e. only right child is absent.
                 return arr[l]<arr[index]?l:-1;
 
-            if(arr[l]<arr[index] || arr[r]<arr[index]){
+            if(arr[l]<arr[index] || arr[r]<arr[index]){ //both children present
                 return arr[l]<arr[r]?l:r;
             }
             return -1;
