@@ -18,10 +18,9 @@ public class CoinChange {
     public static void main(String args[]){
         int  N = 4;
         int[] S= {1,5,3};
-        int paidTillNow=0;
-        System.out.println(countWaysToPay(N, S, paidTillNow,0));
-
+        System.out.println(countWaysToPay(N, S, 0,0));
     }
+
     private static int countWaysToPay(int N,int[] S,int paidTillNow, int currentCoin){
         if(paidTillNow==N){
             // one of possibly many valid solution

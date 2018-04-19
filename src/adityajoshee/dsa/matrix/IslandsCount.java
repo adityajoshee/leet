@@ -3,7 +3,8 @@ package adityajoshee.dsa.matrix;
 /**
  * Created by aditya on 11/19/16.
  */
-// dfs based solution.
+// dfs based solution. (other solution is by disjoint sets)
+
 public class IslandsCount {
     public static void main(String args[]){
         int[][] world = {

@@ -7,14 +7,15 @@ public class CoinChangeDP {
 
 
     public static void main(String args[]){
-        int  N = 4;
-        int[] S= {1,2,3};
+        int  N = 100;
+        int[] S= {1,4,5,100};
         //int N=4;  int [] S = {1,2,3} will have 4 solutions
         //int N=10;  int [] S = {2, 5, 3, 6} will have 5 solutions
         System.out.println(countWaysToPay(N, S));
 
     }
 
+    // can be optimised to On space complexity
     private static int countWaysToPay(int N,int[] S){
         int[][] sumVsSet_dp = new int[N+1][S.length+1];
 

@@ -1,4 +1,4 @@
-package adityajoshee.Y2K18.mar.D04;
+package adityajoshee.Y2K18.mar.D05;
 
 import java.util.*;
 
@@ -15,7 +15,7 @@ import java.util.*;
  4 6 1
  5 6 8
  */
-public class PrimMinimumSpanningTree {
+public class MinimumSpanningTreePrim {
 
     //find weight of MST
     public static void main(String[] args) {

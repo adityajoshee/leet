@@ -6,19 +6,21 @@ import java.util.*;
  * Created by aditya.joshee on 1/15/18.
  * https://leetcode.com/problems/combination-sum/description/
  *
- * Given a list of candidate numbers (C) (without duplicates) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
-
- The same repeated number may be chosen from C unlimited number of times.
+ * Given a list of candidate numbers (C) (without duplicates) and a target number (T),
+ * find all unique combinations
+ * in C where the candidate numbers sums to T.
+ * The same repeated number may be chosen from C unlimited number of times.
  */
-public class CombinationSum {
+public class CombinationSum1 {
     static int k = 0;
     static Set<List> sets = new HashSet<>();
     static List list = new ArrayList();
     public static void main(String[] args){
-        int t = 8;
-        int[] candidates = {2, 3, 6, 8}; //sorted
+        int t = 3;
+        int[] candidates = { 3, 2, 1};
+        // remove duplicates
         find(candidates, t, 0);
-        System.out.println(k);
+        System.out.println("ways:"+k);
         Iterator iterator1 = sets.iterator();
         while (iterator1.hasNext()){
             Iterator iterator = ((List)iterator1.next()).iterator();
@@ -35,9 +37,9 @@ public class CombinationSum {
         }
         if (target==0){
             k++;
-            List s = new ArrayList();
-            s.addAll(list);
-            sets.add(s);
+            List newList = new ArrayList();
+            newList.addAll(list);
+            sets.add(newList);
             return;
         }
         for (int i = p; i<candidates.length; i++){

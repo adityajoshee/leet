@@ -8,7 +8,7 @@ package adityajoshee.dsa.recursion;
 public class WaysToScoreInAGame {
     public static void main(String args[]){
         int[] validPoints = {3,5,10};
-        int n = 20;
+        int n = 15;
         System.out.println(findWays(validPoints,n));
     }
     private static int findWays(int[] validPoints, int finalScore){
