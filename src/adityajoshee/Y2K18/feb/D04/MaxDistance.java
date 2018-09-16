@@ -4,7 +4,7 @@ package adityajoshee.Y2K18.feb.D04;
  * Created by aditya.joshee on 2/4/18.
  */
 
-//Given an array arr[], find the maximum j – i such that arr[j] > arr[i]
+//Given an array arr[], findMethod1 the maximum j – i such that arr[j] > arr[i]
 
 public class MaxDistance {
     public static void main(String[] args) {

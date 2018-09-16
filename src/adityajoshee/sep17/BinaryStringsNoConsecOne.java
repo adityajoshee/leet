@@ -3,7 +3,7 @@ package adityajoshee.sep17;
 /**
  * Created by aditya.joshee on 9/6/17.
  */
-//find no. of binary strings of size k with no
+//findMethod1 no. of binary strings of size k with no
     // consecutive ones
     // by recurrence
     //a[i] = a[i - 1] + b[i - 1]

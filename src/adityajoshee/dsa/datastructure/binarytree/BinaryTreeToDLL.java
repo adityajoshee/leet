@@ -52,7 +52,7 @@ class TreeList {
         if (a==null) return(b);
         if (b==null) return(a);
 
-        // find the last node in each using the .previous pointer
+        // findMethod1 the last node in each using the .previous pointer
         Node aLast = a.small;
         Node bLast = b.small;
 

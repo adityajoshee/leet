@@ -3,7 +3,7 @@ package adityajoshee.Y2K18.feb.D17;
 /**
  * Created by aditya.joshee on 2/17/18.
  *
- * Given an array arr[], find the maximum j – i such that arr[j] > arr[i]
+ * Given an array arr[], findMethod1 the maximum j – i such that arr[j] > arr[i]
  */
 public class MaxJI {
     public static void main(String[] args) {

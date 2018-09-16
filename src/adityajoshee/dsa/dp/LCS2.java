@@ -1,6 +1,6 @@
 package adityajoshee.dsa.dp;
 
-// Sample s1={a,b,p,c} ; s2={p,a,c,p,b,c}
+// ObjectUIDGenerator s1={a,b,p,c} ; s2={p,a,c,p,b,c}
 // Find length of LCS and print the subsequence
 public class LCS2 {
 	public static void main(String args[]){

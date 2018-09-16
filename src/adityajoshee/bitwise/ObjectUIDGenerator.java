@@ -5,7 +5,7 @@ package adityajoshee.bitwise;
  */
 
 // approach to generate object uid for sharded databases.
-public class Sample {
+public class ObjectUIDGenerator {
     public static void main(String args[]){
         int shardId = 3429;
         int typeId = 1;

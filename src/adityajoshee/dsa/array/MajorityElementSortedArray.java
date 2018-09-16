@@ -12,7 +12,7 @@ public class MajorityElementSortedArray {
         System.out.println(isMajorityElement(arr,3));
     }
 
-    // find if x is a majority element (freq > n/2). Arr is sorted.
+    // findMethod1 if x is a majority element (freq > n/2). Arr is sorted.
     private static boolean isMajorityElement(int[] arr, int x){
 
         if(arr[arr.length/2]!=x){

@@ -12,7 +12,7 @@ public class NextHigherNumberOptimised {
         System.out.println(Arrays.toString(arr));
     }
     private static void updateNumber(int[] arr){
-        // find first trough from right...
+        // findMethod1 first trough from right...
         int nextSmallerIndex = arr.length-1;
         boolean isSortedDesc = true;
 
@@ -33,7 +33,7 @@ public class NextHigherNumberOptimised {
             return;
         }
 
-        // find the least greater on the right of current.
+        // findMethod1 the least greater on the right of current.
         // using binary search nLog(n) here instead of O(n) traversal.
         int leastGreaterOnRightIndex = modifiedBinarySearch(arr,nextSmallerIndex+1, arr.length-1, arr[nextSmallerIndex]);
         swap(arr, leastGreaterOnRightIndex, nextSmallerIndex);

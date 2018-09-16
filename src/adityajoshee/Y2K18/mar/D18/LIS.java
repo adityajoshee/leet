@@ -36,7 +36,7 @@ public class LIS {
                 dp[i]++; // otherwise incr by 1 since adding ith element.
             }
         }
-        // now find the max value of LISs ending at among all elements.
+        // now findMethod1 the max value of LISs ending at among all elements.
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {
             max = Math.max(max, dp[i]);

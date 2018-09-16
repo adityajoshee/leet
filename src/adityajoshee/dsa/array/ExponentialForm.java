@@ -4,7 +4,7 @@ package adityajoshee.dsa.array;
  * Created by aditya on 8/12/16.
  */
 public class ExponentialForm {
-// find with minimum base
+// findMethod1 with minimum base
 
     public static void main(String args[]){
         System.out.println(canBeInExpForm(1023));

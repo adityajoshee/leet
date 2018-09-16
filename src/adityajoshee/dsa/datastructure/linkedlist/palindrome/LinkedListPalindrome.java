@@ -8,7 +8,7 @@ public class LinkedListPalindrome {
         Node prev = null;
         Node head = null;
         Node H = null;
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 2; i++) {
             head = new Node(i);
             if (prev!=null){
                 prev.next = head;
@@ -40,13 +40,15 @@ public class LinkedListPalindrome {
         return check(node, left);
     }
 
+    // b->b
     private static boolean check(Node right, NodeHolder left){
         if (right==null){
             return true;
         }
-        boolean b = check(right.next, left);
+        boolean b = check(right.next, left);  // taking 'right' to rightmost node
 
         if (b && left.val.data==right.data){
+            System.out.println("c");
             left.val = left.val.next;
             return true;
         }

@@ -5,7 +5,7 @@ package adityajoshee.dsa.array;
  */
 /*
 In a sorted array having repeated elements any number of time.
-Given a element find its no. of occurrences.
+Given a element findMethod1 its no. of occurrences.
  */
 public class SortedArrayFrequencyOfAnyElement {
     public static void main(String args[]){
@@ -17,7 +17,7 @@ public class SortedArrayFrequencyOfAnyElement {
         }
     }
     private static int findFreq(int[] arr, int x) throws Exception {
-        // find lower and higher element indices using binarysearch...
+        // findMethod1 lower and higher element indices using binarysearch...
         int l = findIndex(arr,x,true);
         int r = findIndex(arr,x,false);
         System.out.println("lowest index of "+x+": "+l);
@@ -25,7 +25,7 @@ public class SortedArrayFrequencyOfAnyElement {
         return r-l+1;
     }
 
-    // find element lower/higher than num for sorted arr
+    // findMethod1 element lower/higher than num for sorted arr
     private static int findIndex(int[] arr, final int num, boolean lower) throws Exception {
         int l = 0;
         int r = arr.length-1;

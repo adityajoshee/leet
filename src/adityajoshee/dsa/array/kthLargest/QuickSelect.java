@@ -12,8 +12,8 @@ import java.util.Arrays;
 
 public class QuickSelect {
     public static void main(String args[]){
-        int[] arr = {-1,2,1,6,3,2,0,5,11,4,102,100};
-        System.out.println(findKthSmallest(arr,4));
+        int[] arr = {2,5,1,6,4,3};//{-1,2,1,6,3,2,0,5,11,4,102,100};
+        System.out.println(findKthSmallest(arr,2));
     }
     private static int findKthSmallest(int[] arr, int k){
         return helper(arr, 0, arr.length-1, k);

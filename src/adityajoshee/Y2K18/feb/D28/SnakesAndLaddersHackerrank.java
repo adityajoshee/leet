@@ -8,7 +8,7 @@ import java.util.*;
 public class SnakesAndLaddersHackerrank {
     public static void main(String[] args) {
         Scanner scanner  = new Scanner(System.in);
-        int t = scanner.nextInt();
+        int t = scanner.nextInt(); // tests
         for (int i = 0; i < t; i++) {
             DirectedGraph directedGraph = new DirectedGraph(100);
             // add ladder edges

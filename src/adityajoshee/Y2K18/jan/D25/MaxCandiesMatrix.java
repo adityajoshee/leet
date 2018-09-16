@@ -5,7 +5,7 @@ package adityajoshee.Y2K18.jan.D25;
  *
  * Given a matrix with each cell containing each number of candies,
  * and a constraint that you can move only right or down, from the top
- * left corner to the bottom right corner, find the path that gets you
+ * left corner to the bottom right corner, findMethod1 the path that gets you
  * maximum candies.
  */
 public class MaxCandiesMatrix {

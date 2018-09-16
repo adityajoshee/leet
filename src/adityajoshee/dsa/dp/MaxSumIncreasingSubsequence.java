@@ -11,7 +11,7 @@ public class MaxSumIncreasingSubsequence {
         System.out.println(find(arr));
     }
     private static int find(int[] arr){
-        /* find max sum for every subseq.
+        /* findMethod1 max sum for every subseq.
         which contains ith element and store
         at dpSums[i]
          */
@@ -29,7 +29,7 @@ public class MaxSumIncreasingSubsequence {
         System.out.println(Arrays.toString(dpSums));
         return maxElement(dpSums);
     }
-    // find max element from an array
+    // findMethod1 max element from an array
     private static int maxElement(int[] arr){
         int maxOfAll=arr[0];
         for(int i=1;i<arr.length;i++){

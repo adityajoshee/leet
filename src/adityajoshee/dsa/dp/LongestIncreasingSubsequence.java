@@ -24,7 +24,7 @@ public class LongestIncreasingSubsequence {
         }
         return maxElement(LIS);
     }
-    // find max element from an array
+    // findMethod1 max element from an array
     private static int maxElement(int[] arr){
         int maxOfAll=arr[0];
         for(int i=1;i<arr.length;i++){

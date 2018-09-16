@@ -35,7 +35,7 @@ public class FriendCircles {
         }
     }
     /*
-    Basically, we have to find the number of strongly connected components
+    Basically, we have to findMethod1 the number of strongly connected components
     in the friends graph, using DFS.
      */
 }

@@ -4,7 +4,7 @@ package adityajoshee.dsa.recursion;
  * Created by aditya.j on 4/2/17.
  */
 /*
-find the min number of scalar multiplications needed for product of an array of matrices
+findMethod1 the min number of scalar multiplications needed for product of an array of matrices
  */
 public class MatrixChainMult {
     public static void main(String args[]){

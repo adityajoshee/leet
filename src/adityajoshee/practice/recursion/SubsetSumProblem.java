@@ -3,7 +3,7 @@ package adityajoshee.practice.recursion;
 /**
  * Created by aditya on 11/13/16.
  */
-// find whether there is atleast a subset with sum S
+// findMethod1 whether there is atleast a subset with sum S
 // This function can be used as a subroutine to equal-sum-partitioning problem.
 
 public class SubsetSumProblem {

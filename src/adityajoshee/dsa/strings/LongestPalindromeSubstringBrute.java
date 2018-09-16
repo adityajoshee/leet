@@ -7,7 +7,7 @@ package adityajoshee.dsa.strings;
 // Brute force approach - O(N^3)
 // checks all substrings and keep track of current max size palindrome.
 
-public class LongestPalindromeSubstring {
+public class LongestPalindromeSubstringBrute {
 
     public static void main(String[] a){
         String input = "CBBAKKABBCXLITOTILXD";

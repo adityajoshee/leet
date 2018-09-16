@@ -12,7 +12,7 @@ public class CountingSort {
     }
 
     private static void sort(int[] arr) {
-        //find max
+        //findMethod1 max
         int k = 0;
         for (int i = 0; i < arr.length; i++) {
             k = Math.max(arr[i], k);

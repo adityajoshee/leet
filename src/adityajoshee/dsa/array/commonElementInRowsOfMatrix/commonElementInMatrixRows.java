@@ -7,7 +7,7 @@ import java.util.Arrays;
 /**
  * Created by aditya.j on 3/29/17.
  */
-// find single common element if present
+// findMethod1 single common element if present
 //http://www.geeksforgeeks.org/find-common-element-rows-row-wise-sorted-matrix/
 
 public class commonElementInMatrixRows {

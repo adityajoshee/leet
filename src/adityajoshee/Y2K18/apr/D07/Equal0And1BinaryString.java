@@ -52,7 +52,7 @@ public class Equal0And1BinaryString {
 
             if (map.containsKey(sum)){
                 int preIdx = map.get(sum);
-                max = max < i - preIdx  ? i - preIdx : max;
+                max = max < i - preIdx  ? i - preIdx : max; //larger length of substring to become max
             }
             else {
                 map.put(sum, i);

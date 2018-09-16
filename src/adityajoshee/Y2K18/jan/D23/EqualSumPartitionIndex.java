@@ -2,7 +2,7 @@ package adityajoshee.Y2K18.jan.D23;
 
 /**
  * Created by aditya.joshee on 1/23/18.
- * From an array, Need to find an index in which sum of left elements & sum of right elements are same.
+ * From an array, Need to findMethod1 an index in which sum of left elements & sum of right elements are same.
  */
 public class EqualSumPartitionIndex {
     public static void main(String[] args) {

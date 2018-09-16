@@ -16,7 +16,7 @@ public class kthlargestIn2Sortd {
 
     private static int findKthLargest(int[] a, int[] b, int k) throws Exception {
         if(k<=0 || k>a.length+b.length){
-            throw new Exception("Cannot find kth largest!");
+            throw new Exception("Cannot findMethod1 kth largest!");
         }
         int p=0, x=0; // starting index of arrays
 
@@ -106,7 +106,7 @@ public class kthlargestIn2Sortd {
 
         //select two index i,j from A and B respectively such that If A[i] is between B[j] and B[j-1]
         //Then A[i] would be the i+j+1 smallest element because.
-        //Therefore, if we choose i and j such that i+j = k-1, we are able to find the k-th smallest element.
+        //Therefore, if we choose i and j such that i+j = k-1, we are able to findMethod1 the k-th smallest element.
         int i = n1 / (n1 + n2) * k;//let's try to chose a middle element close to kth element in A
         int j = k - 1 - i;
 

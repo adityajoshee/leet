@@ -6,7 +6,7 @@ package adityajoshee.dsa.array;
 
 
 // O(n)
-// simply find largest and 2nd largest in single pass
+// simply findMethod1 largest and 2nd largest in single pass
 public class LargestPairSumUnsorted {
 
     public static void main(String ags[]){

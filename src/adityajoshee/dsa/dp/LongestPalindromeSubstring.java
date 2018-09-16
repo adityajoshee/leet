@@ -3,7 +3,7 @@ package adityajoshee.dsa.dp;
 /**
  * Created by adityajoshee on 28/04/16.
  *
- * // NoOfTrianglesPossible using DP
+ *  using DP
  * O(n*n) time & O(n*n) space
  */
 

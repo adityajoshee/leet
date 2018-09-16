@@ -5,7 +5,7 @@ import adityajoshee.dsa.matrix.PrintMatrix;
 /**
  * Created by aditya on 11/13/16.
  */
-// find if partioning is possible or not.
+// findMethod1 if partioning is possible or not.
 // The resulting two subsets can be of unequal size, but not empty
 // This solution uses subset sum finding as subroutine.
 public class EqualSumPartitionProblem {

@@ -15,7 +15,7 @@ public class KthLargestInTwoSorted {
     }
 //    private static int findKthLargest(int[] a, int[] b, int k) throws Exception {
 //        if(k<=0 || k>a.length+b.length){
-//            throw new Exception("Cannot find kth largest!");
+//            throw new Exception("Cannot findMethod1 kth largest!");
 //        }
 //        int p=0, x=0; // starting index of arrays
 //

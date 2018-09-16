@@ -17,7 +17,7 @@ import java.util.*;
  */
 public class MinimumSpanningTreePrim {
 
-    //find weight of MST
+    //findMethod1 weight of MST
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
