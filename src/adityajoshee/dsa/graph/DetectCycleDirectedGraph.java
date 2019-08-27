@@ -21,30 +21,30 @@ public class DetectCycleDirectedGraph {
         int[] stack = new int[dg.adj.length]; // to track current trail/path of nodes
         for (int i = 0; i < dg.adj.length; i++) {
             if (visited[i]!=1){
-                if (visit(dg, i, visited, stack)){
+                if (hasCycle(dg, i, visited, stack)){
                     return true;
                 }
             }
         }
         return false;
     }
-    private static boolean visit(DirectedGraph dg, int currentVertex, int[] visited, int[] stack){
-        visited[currentVertex] = 1;
-        stack[currentVertex] = 1;
+    private static boolean hasCycle(DirectedGraph dg, int n, int[] visited, int[] stack){
+        visited[n] = 1;
+        stack[n] = 1;
         int i;
-        Iterator<Integer> itr = dg.adj[currentVertex].iterator();
+        Iterator<Integer> itr = dg.adj[n].iterator();
         while (itr.hasNext()){
             i = itr.next();
             if (stack[i]==1){
                 return true;
             }
             if(visited[i]!=1){
-                if(visit(dg, i, visited,stack)){
+                if(hasCycle(dg, i, visited,stack)){
                     return true;
                 }
             }
         }
-        stack[currentVertex] = 0;
+        stack[n] = 0;
         return false;
     }
 }

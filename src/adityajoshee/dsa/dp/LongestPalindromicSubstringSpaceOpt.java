@@ -1,22 +1,41 @@
 package adityajoshee.dsa.dp;
 
 /**
- * Created by adityajoshee on 28/04/16.
- *
- *  using DP
- * O(n*n) time & O(n*n) space
+ * Created by aditya.joshee on 2019-08-17.
  */
-
-public class LongestPalindromeSubstring {
-    public static void main(String[] a) {
-        String input = "XXSAFASAXXFFXX";
-        char[] ip = input.toCharArray();
-        //System.out.print(isPalindrome(ip,0,ip.length-1));
-        if (ip.length > 1) {
-            System.out.println(getLength(ip));
-        }
+public class LongestPalindromicSubstringSpaceOpt {
+    public static void main(String[] args){
+        System.out.println(longestPalindrome("abaebc"));
     }
 
+    private static String longestPalindrome(String str) {
+        char[] s = str.toCharArray();
+        int max = 0;
+        String maxPalin = "";
+        for(int i=0; i<s.length-1; i++){
+            int oddLen = expand(s, i, i);
+            int evenLen = expand(s, i, i+1);
+            int m = Math.max(oddLen, evenLen);
+            if(max<m){
+                max = m;
+                int start = i - (m-1)/2;
+                maxPalin = str.substring(start, start+m);
+            }
+        }
+        System.out.println(max);
+        return maxPalin;
+    }
+
+    private static int expand(char[] s, int l, int r) {
+        while(l>=0 && r<s.length && s[l]==s[r]){
+            l--;
+            r++;
+        }
+        return r-l-1;
+    }
+
+
+    // On*n space solution
     private static int getLength(char[] input) {
         boolean[][] dp = new boolean[input.length][input.length];
         int maxlen = 1; // by default single char is a palindr

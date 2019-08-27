@@ -58,7 +58,7 @@ public class JourneyToTheMoon {
             }
         }
 
-        // group 2 nodes
+        // group 2 nodes, perform a union operation (application - add edge to two nodes in a un-graph)
         void union(int i, int j){
             int iParent = findParent(i);
             int jParent = findParent(j);
@@ -67,7 +67,7 @@ public class JourneyToTheMoon {
                 // both nodes are already in same set, so return
                 return;
             }
-            if (rank[iParent]>rank[jParent]){
+            if (rank[iParent]>rank[jParent]){ // using union by rank here (another option is union by size)
                 // put node j's parent in the group containing i
                 // increase i's parent rank
                 rank[iParent]++;

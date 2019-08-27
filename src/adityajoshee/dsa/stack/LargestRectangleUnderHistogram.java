@@ -36,11 +36,11 @@ public class LargestRectangleUnderHistogram {
         }
         while (!stack.empty()){
             int x = stack.pop();
-            int lesser = -1;
+            int left = -1;
             if (!stack.isEmpty()){
-                lesser = stack.peek();
+                left = stack.peek();
             }
-            maxArea = maxArea>=arr[x]*(arr.length-lesser-1)?maxArea:arr[x]*(arr.length-lesser-1);
+            maxArea = Math.max(maxArea,arr[x]*(arr.length-left-1));//?maxArea:arr[x]*(arr.length-lesser-1);
         }
         return  maxArea;
     }

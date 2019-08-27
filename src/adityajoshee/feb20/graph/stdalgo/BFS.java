@@ -20,31 +20,29 @@ public class BFS {
     }
     private static void exe(Graph g){
         Queue<Integer> queue = new LinkedList<>();
-        int[] visited = new int[g.adj.length];
+        boolean[] visited = new boolean[g.adj.length];
         for (int i = 0; i < g.adj.length; i++) {
-            if (visited[i]!=1){
-                visit(g,i,visited,queue);
-            }
-        }
-    }
+            if (!visited[i]){
+                queue.add(i);
+                visited[i] = true;
 
-    private static void visit(Graph g, int inode, int[] visited,Queue queue){
-        queue.add(inode);
-
-        while (!queue.isEmpty()){
-            Integer hnode = (Integer) queue.poll();
-            visited[inode] = 1;
-            System.out.print(hnode+" ");
-            if (g.adj[hnode]!=null){
-                Iterator<Integer> iterator = g.adj[hnode].iterator();
-                while (iterator.hasNext()){
-                    int cnode = iterator.next();
-                    if (visited[cnode]!=1){
-                        visited[cnode]=1;
-                        queue.add(cnode);
+                while (!queue.isEmpty()){
+                    Integer n = queue.remove();
+                    System.out.print(n+" ");
+                    if (g.adj[n]!=null){
+                        Iterator<Integer> iterator = g.adj[n].iterator();
+                        while (iterator.hasNext()){
+                            int nei = iterator.next();
+                            if (!visited[nei]){
+                                visited[nei]=true;
+                                queue.add(nei);
+                            }
+                        }
                     }
                 }
             }
         }
     }
+
+
 }

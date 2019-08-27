@@ -10,12 +10,6 @@ import java.util.Queue;
 
 // based on BFS of tree and maintaining level at every node
 public class WordLadder {
-    {
-        System.out.println("Hey object init..");
-    }
-    static{
-        System.out.println("Hey class init..");
-    }
     public static void main(String args[]){
         HashSet<String> dict = new HashSet<>();
         dict.add("hot");

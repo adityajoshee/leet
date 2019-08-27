@@ -17,13 +17,13 @@ public class NextSmallerElement {
             else {
                 while (!stack.empty() && arr[stack.peek()]>arr[i]){
                     int k = stack.pop();
-                    System.out.println(arr[k] + " > " + arr[i]);
+                    System.out.println(arr[k] + " NSE " + arr[i]);
                 }
                 stack.push(i);
             }
         }
         while (!stack.empty()){
-            System.out.println(arr[stack.pop()] + " >  " + "-1");
+            System.out.println(arr[stack.pop()] + " NSE  " + "-1");
         }
     }
 }

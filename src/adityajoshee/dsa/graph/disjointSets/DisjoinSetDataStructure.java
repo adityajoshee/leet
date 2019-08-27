@@ -1,5 +1,7 @@
 package adityajoshee.dsa.graph.disjointSets;
 
+import java.util.Random;
+
 /**
  * Created by aditya.j on 2/25/17.
  */
@@ -8,6 +10,8 @@ public class DisjoinSetDataStructure {
     int[] parent, rank;
 
     public DisjoinSetDataStructure(int size){
+        Random r = new Random();
+        r.nextInt();
         parent = new int[size];
         for (int i = 0; i < size; i++) {
             parent[i]=i;

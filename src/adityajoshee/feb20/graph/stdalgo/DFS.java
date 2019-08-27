@@ -23,23 +23,23 @@ public class DFS {
     }
 
     private static void exe(Graph g) {
-        int[] visited = new int[g.adj.length];
+        boolean[] visited = new boolean[g.adj.length];
         for (int i = 0; i < g.adj.length; i++) {
-            if (visited[i]!=1){
+            if (!visited[i]){
                 visit(g, visited, i);
             }
         }
     }
 
-    private static void visit(Graph g, int[] visited, int i){
-        visited[i]=1;
+    private static void visit(Graph g, boolean[] visited, int i){
+        visited[i]=true;
         System.out.println("Visiting:"+i);
         if (g.adj[i]!=null){
             Iterator<Integer> iterator  = g.adj[i].iterator();
             while(iterator.hasNext()){
-                int neig = iterator.next();
-                if (visited[neig]!=1){
-                    visit(g, visited, neig);
+                int nei = iterator.next();
+                if (!visited[nei]){
+                    visit(g, visited, nei);
                 }
             }
         }

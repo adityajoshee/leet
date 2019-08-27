@@ -3,12 +3,14 @@ package adityajoshee.hackerrank.challenges;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.*;
 
 /**
  * Created by aditya on 9/10/16.
  */
 public class RepeatedString {
     public static void main(String arg[]) throws IOException{
+        List<Integer> res = new ArrayList();
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         String s = bufferedReader.readLine();

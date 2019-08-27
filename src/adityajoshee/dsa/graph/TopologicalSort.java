@@ -1,8 +1,6 @@
 package adityajoshee.dsa.graph;
 
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 /**
  * Created by aditya on 11/26/16.
@@ -29,17 +27,43 @@ public class TopologicalSort {
         }
         return topoSortedList;
     }
-    private static void visitDag(DirectedGraph dag, int currentVertex, boolean[] visited, LinkedList<Integer> sortedList){
+    private static void visitDag(DirectedGraph dag, int currentVertex, boolean[] visited, LinkedList<Integer> topoSortList){
         visited[currentVertex] = true;
         Iterator<Integer> itr = dag.adj[currentVertex].iterator();
         while (itr.hasNext()){
             int i = itr.next();
             if (!visited[i]){
-                visitDag(dag,i,visited,sortedList);
+                visitDag(dag,i,visited,topoSortList);
             }
         }
         // all adjacent vertices for currentVertex are visited, so now the currentVertex can be put to dag list.
-        sortedList.push(currentVertex);
+        topoSortList.push(currentVertex);
     }
+
+//    public boolean dfs(Map<Integer, Set<Integer>> g, int x){
+//        boolean[] visited = new boolean[g.size()];
+//        for(int i=0; i<g.size(); i++){
+//            if(!visited[i]){
+//                if(findUsingDFS(i, g, visited, x)){
+//                    return true;
+//                }
+//            }
+//        }
+//        return false;
+//    }
+//
+//    private boolean findUsingDFS(int n, Map<Integer, Set<Integer>> g, boolean[] visited, int x){
+//        if(n==x){
+//            return true;
+//        }
+//        visited[n]=true;
+//        for(int nei : g.get(n)){
+//            if(!visited[nei]){
+//                findUsingDFS(nei, g, visited, x);
+//            }
+//        }
+//        return false;
+//    }
+
 
 }
