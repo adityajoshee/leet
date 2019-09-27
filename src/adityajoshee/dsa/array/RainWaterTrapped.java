@@ -3,7 +3,7 @@ package adityajoshee.dsa.array;
 /**
  * Created by aditya on 8/12/16.
  */
-public class WaterTrapped {
+public class RainWaterTrapped {
     public static void main(String args[]){
         int[] arr  = new int[]{3, 0, 0, 2, 0, 4};
         System.out.println(totalWaterTrappedBetweenBuildings(arr));

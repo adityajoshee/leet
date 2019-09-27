@@ -16,9 +16,6 @@ public class MaxOverlappingIntervals {
                 16, 15,
                 17, 20
         };
-        int[] arrStart = new int[]{1,2,10,11,16,17};
-        int[] end;
-
         int i = arr.length - 1;
         int count=0;
         int max=0;

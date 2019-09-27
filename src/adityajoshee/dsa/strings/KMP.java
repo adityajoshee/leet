@@ -4,13 +4,13 @@ package adityajoshee.dsa.strings;
  * Created by adityajoshee on 17/05/16.
  */
 
-// uses PrefixFunctionKMP.java
+// uses LPSPrefixFunctionKMP.java
 
 public class KMP {
     public static void main(String args[]){
         String patternString = "bcbb";
         char[] pattern = patternString.toCharArray();
-        int[] prefixArray = PrefixFunctionKMP.generatePrefixFunction(pattern);
+        int[] prefixArray = LPSPrefixFunctionKMP.generatePrefixFunction(pattern);
         String textString = "abcbcabcbcbb";
         char[] text = textString.toCharArray();
         System.out.println(search(text,pattern,prefixArray));
@@ -33,7 +33,7 @@ public class KMP {
                     // simple go to next char in text
                 }
                 else{
-                    // retreat
+                    // backtrack on pattern, find how many chars in p to skip (which already match)
                     p=prefixArray[p-1];
                     //System.out.print("retreat:"+p+"    ");
                     i--; // keep i to same position (-1 bcoz it will be incr in loop)

@@ -7,10 +7,10 @@ package adityajoshee.dsa.strings;
 
 // generating prefix func is the first half of KMP
 
-public class PrefixFunctionKMP {
+public class LPSPrefixFunctionKMP {
 
     public static void main(String args[]){
-        String patternString  = "acacabacacabacacac";
+        String patternString  = "abaaab";
 
         char[] pattern = patternString.toCharArray();
 
@@ -24,23 +24,24 @@ public class PrefixFunctionKMP {
 
 
     public static int[] generatePrefixFunction(char[] pattern){
-        int j=0;
+        int len=0;
         int[] prefixArray = new int[pattern.length];
-        prefixArray[0]=0; // as we are looking only for proper prefixes.
+        prefixArray[0]=0; // as we are looking only for PROPER prefixes.
+        int i=1;
 
-        for(int i=1;i<pattern.length;){
-            if(pattern[i]==pattern[j]){
-                j++;
-                prefixArray[i]=j;
+        while (i<pattern.length){
+            if(pattern[i]==pattern[len]){
+                len++;
+                prefixArray[i]=len;
                 i++;
             }
             else {
-                if(j==0){
+                if(len==0){
                     prefixArray[i]=0;
                     i++;
                 }
                 else{
-                    j=prefixArray[j-1];
+                    len=prefixArray[len-1];
                 }
             }
         }

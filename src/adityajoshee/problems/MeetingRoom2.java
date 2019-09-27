@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
  * Created by aditya.joshee on 2019-08-16.
  */
 public class MeetingRoom2 {
-    // find min conf rooms needed
+    // find min conf rooms needed = find max overlapping rooms
 
     public static void main(String[] args) {
         int[][] meetings = {{1,5},{2,3},{3,4},{3,5}};

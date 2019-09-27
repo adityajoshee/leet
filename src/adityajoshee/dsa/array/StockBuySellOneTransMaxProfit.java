@@ -36,10 +36,10 @@ public class StockBuySellOneTransMaxProfit {
     // O(n)
     private static int maxProfitSingleTrans(int[] prices){
         int profit = 0;
-        int currentPrice = prices[0];
+        int buyPrice = prices[0];
         for(int i=1; i<prices.length; i++){
-            profit = prices[i]-currentPrice>profit?prices[i]-currentPrice:profit;
-            currentPrice = prices[i]<currentPrice?prices[i]:currentPrice;
+            profit = prices[i]-buyPrice>profit?prices[i]-buyPrice:profit;
+            buyPrice = prices[i]<buyPrice?prices[i]:buyPrice;
         }
         return profit;
     }
