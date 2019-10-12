@@ -1,5 +1,7 @@
 package adityajoshee.Y2K19.sep;
 
+import java.util.List;
+
 /**
  * Created by aditya.joshee on 2019-09-27.
  */
@@ -7,7 +9,7 @@ public class SCS {
 
     public static void main(String[] args) {
 
-        System.out.println(shortestCommonSupersequence("abac","cababab"));
+        System.out.println(shortestCommonSupersequence("bbabacaa","cccababab"));
     }
     public static String shortestCommonSupersequence(String s1, String s2) {
     /*

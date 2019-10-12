@@ -6,8 +6,8 @@ package adityajoshee.Y2K19.apr.dp;
 // smallest common supersequence of 2 string
 public class SCS {
     public static void main(String[] args) {
-        String s1 = "AGGTAB";
-        String s2 = "GXTXAYB";
+        String s1 = "bbabacaa";
+        String s2 = "cccababab";
         System.out.println(getSCS(s1.toCharArray(), s1.length()-1, s2.toCharArray(), s2.length()-1));
     }
 
